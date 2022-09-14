@@ -1,0 +1,59 @@
+package com.imooc.diners.Controller;
+
+import com.imooc.commons.model.domain.ResultInfo;
+import com.imooc.commons.model.dto.DinersDTO;
+import com.imooc.commons.utils.ResultInfoUtil;
+import com.imooc.diners.service.DinnersService;
+import io.swagger.annotations.Api;
+import org.mybatis.spring.annotation.MapperScan;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RestController;
+
+import javax.annotation.Resource;
+import javax.servlet.http.HttpServlet;
+import javax.servlet.http.HttpServletRequest;
+
+@RestController
+@Api(tags = "食客相关的接口")
+public class DinnersController {
+
+    @Resource
+    private DinnersService dinnersService;
+
+    @Resource
+    private HttpServletRequest request;
+
+    /**
+     * 登录
+     * @param account
+     * @param password
+     * @return
+     */
+    @GetMapping("signin")
+    public ResultInfo signIn(String account, String password){
+        return dinnersService.signIn(account,password, request.getServletPath());
+    }
+
+    /**
+     * 校验手机号是否注册
+     * @param phone
+     * @return
+     */
+    @GetMapping("checkPhone")
+    public ResultInfo checkPhone(String phone){
+        dinnersService.checkPhoneIsRegistered(phone);
+        return ResultInfoUtil.buildSuccess(request.getServletPath());
+    }
+
+    /**
+     * 注册
+     * @param dinersDTO
+     * @return
+     */
+    @PostMapping("register")
+    public ResultInfo register(@RequestBody DinersDTO dinersDTO){
+        return dinnersService.register(dinersDTO, request.getServletPath());
+    }
+}
