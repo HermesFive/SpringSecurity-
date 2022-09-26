@@ -4,7 +4,6 @@ import cn.hutool.core.util.RandomUtil;
 import cn.hutool.core.util.StrUtil;
 import com.imooc.commons.constant.RedisKeyConstant;
 import com.imooc.commons.utils.AssertUtil;
-import com.imooc.diners.config.RedisTemplateConfiguration;
 import org.springframework.data.redis.core.RedisTemplate;
 import org.springframework.stereotype.Service;
 

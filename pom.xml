@@ -14,6 +14,8 @@
         <module>ms-diners</module>
         <module>commons</module>
         <module>ms-oauth2-server</module>
+        <module>ms-seckill</module>
+        <module>ms-follow</module>
     </modules>
 
     <!-- 可以集中定义依赖资源的版本信息 -->
@@ -92,6 +94,11 @@
                 <groupId>com.google.guava</groupId>
                 <artifactId>guava</artifactId>
                 <version>${guava-version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-starter-test</artifactId>
+                <scope>test</scope>
             </dependency>
         </dependencies>
     </dependencyManagement>

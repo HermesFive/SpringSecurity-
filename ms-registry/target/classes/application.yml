@@ -5,13 +5,15 @@ spring:
   application:
     name: ms-registry
 
-
-#配置Eureka Server
+# 配置 Eureka Server 注册中心
 eureka:
   client:
     register-with-eureka: false
     fetch-registry: false
     service-url:
-      defaultZone: http://locathost:8080/eureka/
-  server:
-    enable-self-preservation: false
+      defaultZone: http://localhost:8080/eureka/
+
+
+logging:
+  pattern:
+    console: '%d{HH:mm:ss} [%thread] %-5level %logger{50} - %msg%n'

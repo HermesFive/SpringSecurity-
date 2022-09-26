@@ -10,6 +10,12 @@ import com.imooc.commons.exception.ParameterException;
  */
 public class AssertUtil {
 
+    public static void  mustLogin(String accessToken){
+        if(StrUtil.isBlank(accessToken)){
+            throw new ParameterException(ApiConstant.NO_LOGIN_CODE,ApiConstant.NO_LOGIN_MESSAGE);
+        }
+    }
+
     /**
      * 判断字符串非空
      *

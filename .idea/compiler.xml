@@ -7,9 +7,11 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="ms-oauth2-server" />
         <module name="ms-registry" />
         <module name="ms-diners" />
+        <module name="ms-follow" />
+        <module name="ms-oauth2-server" />
+        <module name="ms-seckill" />
         <module name="commons" />
         <module name="ms-gateway" />
       </profile>
