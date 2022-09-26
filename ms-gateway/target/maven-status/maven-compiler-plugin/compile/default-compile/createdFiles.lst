@@ -1,0 +1,6 @@
+com\imooc\gateway\config\IgnoreUrlsConfig.class
+com\imooc\gateway\config\RestTemplateConfiguration.class
+com\imooc\gateway\GatewayApplication.class
+META-INF\spring-configuration-metadata.json
+com\imooc\gateway\component\HandleException.class
+com\imooc\gateway\filter\AuthGlobalFilter.class

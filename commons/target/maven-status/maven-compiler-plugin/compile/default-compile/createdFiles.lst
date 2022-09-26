@@ -1,0 +1,13 @@
+com\imooc\commons\constant\ApiConstant.class
+com\imooc\commons\model\pojo\VoucherOrders.class
+com\imooc\commons\utils\ResultInfoUtil.class
+com\imooc\commons\model\base\BaseModel.class
+com\imooc\commons\model\domain\SignInIdentity.class
+com\imooc\commons\constant\RedisKeyConstant.class
+com\imooc\commons\model\pojo\SeckillVouchers.class
+com\imooc\commons\model\vo\SignInDinerInfo.class
+com\imooc\commons\model\dto\DinersDTO.class
+com\imooc\commons\model\pojo\Diners.class
+com\imooc\commons\model\domain\ResultInfo.class
+com\imooc\commons\utils\AssertUtil.class
+com\imooc\commons\exception\ParameterException.class
