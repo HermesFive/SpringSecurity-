@@ -1,6 +1,7 @@
 package com.imooc.follow.controller;
 
 import com.imooc.commons.model.domain.ResultInfo;
+import com.imooc.commons.utils.ResultInfoUtil;
 import com.imooc.follow.service.FollowService;
 import org.springframework.web.bind.annotation.*;
 
@@ -17,6 +18,16 @@ public class FollowController {
     private FollowService followService;
     @Resource
     private HttpServletRequest request;
+
+    /**
+     * 获取粉丝列表
+     * @param dinerId
+     * @return
+     */
+    @GetMapping("followers/{dinerId}")
+    public ResultInfo findFollowers(@PathVariable Integer dinerId){
+        return ResultInfoUtil.buildSuccess(request.getServletPath(),followService.findFollowers(dinerId));
+    }
 
     /**
      * 共同关注列表

@@ -12,6 +12,7 @@
         <module name="ms-follow" />
         <module name="ms-oauth2-server" />
         <module name="ms-seckill" />
+        <module name="ms-feeds" />
         <module name="commons" />
         <module name="ms-gateway" />
       </profile>
