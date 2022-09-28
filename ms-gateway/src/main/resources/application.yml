@@ -25,19 +25,6 @@ spring:
           filters:
             - StripPrefix=1
 
-        - id: ms-follow
-            uri: lb://ms-follow
-            predicates:
-              - Path=/follow/**
-            filters:
-              - StripPrefix=1
-
-        - id: ms-feeds
-            uri: lb://ms-feeds
-            predicates:
-              - Path=/feeds/**
-            filters:
-              - StripPrefix=1
 
 secure:
   ignore:
